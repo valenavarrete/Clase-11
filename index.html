@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clase 11 x Vale Navarrete</title>
+    <!--estilo de bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--estilo de chartlist-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.css" integrity="sha512-V0+DPzYyLzIiMiWCg3nNdY+NyIiK9bED/T1xNBj08CaIUyK3sXRpB26OUCIzujMevxY9TRJFHQIxTwgzb0jVLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 700 600">
+        <rect width="900" height="590" x="0" y="0" fill="#FFFFFF" id="background" />
+        <g id="series">
+            <g transform="translate(0,0)">
+                <g transform="translate(50,50)" clip-path="url(#serieClipPath)">
+                    <g id="axis">
+                        <g transform="translate(0,490)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle">
+                            <path class="domain" stroke="currentColor" d="M0,6V0H600V6" />
+                            <g class="tick" opacity="1" transform="translate(0,0)">
+                                <line stroke="currentColor" y2="6" />
+                                <text fill="currentColor" y="9" dy="0.71em">0</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(75,0)">
+                                <line stroke="currentColor" y2="6" />
+                                <text fill="currentColor" y="9" dy="0.71em">50</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(150,0)">
+                                <line stroke="currentColor" y2="6" />
+                                <text fill="currentColor" y="9" dy="0.71em">100</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(225,0)">
+                                <line stroke="currentColor" y2="6" />
+                                <text fill="currentColor" y="9" dy="0.71em">150</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(300,0)">
+                                <line stroke="currentColor" y2="6" />
+                                <text fill="currentColor" y="9" dy="0.71em">200</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(375,0)">
+                                <line stroke="currentColor" y2="6" />
+                                <text fill="currentColor" y="9" dy="0.71em">250</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(450,0)">
+                                <line stroke="currentColor" y2="6" />
+                                <text fill="currentColor" y="9" dy="0.71em">300</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(525,0)">
+                                <line stroke="currentColor" y2="6" />
+                                <text fill="currentColor" y="9" dy="0.71em">350</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(600,0)">
+                                <line stroke="currentColor" y2="6" />
+                                <text fill="currentColor" y="9" dy="0.71em">400</text>
+                            </g>
+                            <text x="600" dy="-5" text-anchor="end" style="font-family: Arial, sans-serif; font-size: 12px; fill: rgb(123, 123, 123); font-weight: bold;">Budget (mln)</text>
+                        </g>
+                        <g fill="none" font-size="10" font-family="sans-serif" text-anchor="end">
+                            <path class="domain" stroke="currentColor" d="M-6,490H0V0H-6" />
+                            <g class="tick" opacity="1" transform="translate(0,490)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">0</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,455)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">200</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,420)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">400</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,385)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">600</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,350)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">800</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,315)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">1,000</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,280)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">1,200</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,245)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">1,400</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,210)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">1,600</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,175)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">1,800</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,140)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">2,000</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,105)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">2,200</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,70)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">2,400</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,35)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">2,600</text>
+                            </g>
+                            <g class="tick" opacity="1" transform="translate(0,0)">
+                                <line stroke="currentColor" x2="-6" />
+                                <text fill="currentColor" x="-9" dy="0.32em">2,800</text>
+                            </g>
+                            <text x="4" text-anchor="start" dominant-baseline="hanging" style="font-family: Arial, sans-serif; font-size: 12px; fill: rgb(123, 123, 123); font-weight: bold;">Real Worldwide Box Office (mln)</text>
+                        </g>
+                    </g>
+                    <g id="viz">
+                        <g><circle cx="6" cy="420" fill="rgb(213, 238, 159)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="356" cy="2" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="300" cy="106" fill="rgb(213, 238, 159)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="17" cy="354" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="534" cy="0" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="12" cy="440" fill="rgb(254, 210, 129)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="16" cy="351" fill="rgb(137, 207, 165)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="20" cy="468" fill="rgb(219, 73, 74)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="17" cy="447" fill="rgb(213, 238, 159)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="387" cy="128" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="2" cy="417" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="95" cy="309" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="14" cy="408" fill="rgb(219, 73, 74)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="537" cy="132" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="18" cy="413" fill="rgb(70, 150, 179)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="6" cy="437" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="68" cy="320" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="225" cy="198" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="6" cy="424" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="173" cy="310" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="23" cy="464" fill="rgb(219, 73, 74)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="330" cy="224" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="141" cy="290" fill="rgb(219, 73, 74)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="35" cy="394" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="113" cy="347" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="383" cy="200" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="285" cy="225" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="188" cy="319" fill="rgb(219, 73, 74)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="4" cy="444" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="263" cy="255" fill="rgb(219, 73, 74)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="15" cy="465" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="1" cy="443" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="338" cy="303" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="548" cy="244" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="5" cy="468" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="9" cy="421" fill="rgb(94, 79, 162)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="83" cy="371" fill="rgb(213, 238, 159)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="141" cy="324" fill="rgb(219, 73, 74)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="140" cy="335" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="225" cy="266" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="225" cy="236" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="141" cy="326" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="150" cy="336" fill="rgb(219, 73, 74)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="225" cy="327" fill="rgb(248, 142, 83)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="300" cy="254" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="388" cy="257" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="49" cy="407" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="300" cy="277" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="268" cy="261" fill="rgb(158, 1, 66)" r="6.5" stroke="none" /></g>
+                        <g><circle cx="9" cy="447" fill="rgb(251, 248, 176)" r="6.5" stroke="none" /></g>
+                        <g id="labels">
+                            <g transform="translate(6,420)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(356,2)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(300,106)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(17,354)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(534,0)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(12,440)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(16,351)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(20,468)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(17,447)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(387,128)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(2,417)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(95,309)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(14,408)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(537,132)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(18,413)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(6,437)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(68,320)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(225,198)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(6,424)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(173,310)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(23,464)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(330,224)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(141,290)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(35,394)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(113,347)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(383,200)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(285,225)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(188,319)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(4,444)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(263,255)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(15,465)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(1,443)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(338,303)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(548,244)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(5,468)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(9,421)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(83,371)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(141,324)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(140,335)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(225,266)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(225,236)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(141,326)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(150,336)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(225,327)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(300,254)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(388,257)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(49,407)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(300,277)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(268,261)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                            <g transform="translate(9,447)">
+                                <text x="0" y="0" text-anchor="middle" dominant-baseline="text-before-edge" transform="translate(0,0)"><tspan x="0" y="0" dy="0" /></text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <text y="4" x="4" style="font-family: Arial, sans-serif; font-size: 12px; fill: black; font-weight: bold; dominant-baseline: hanging;" />
+            </g>
+        </g>
+        <g id="grid"><rect x="0" y="0" width="700" height="590" fill="none" stroke="#ccc" /></g>
+        <clipPath id="serieClipPath"><rect x="-50" y="-50" width="700" height="590" /></clipPath>
+        <g id="legend" transform="translate(700,50)">
+            <g transform="translate(5,0)">
+                <g class="legendColor" transform="translate(0,0)">
+                    <g class="legendCells" transform="translate(0,16)">
+                        <g class="cell" transform="translate(0, 0)">
+                            <rect class="swatch" height="15" width="15" style="fill: rgb(158, 1, 66);" />
+                            <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Acción</tspan></text>
+                        </g>
+                        <g class="cell" transform="translate(0, 21)">
+                            <rect class="swatch" height="15" width="15" style="fill: rgb(219, 73, 74);" />
+                            <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Aventura</tspan></text>
+                        </g>
+                        <g class="cell" transform="translate(0, 42)">
+                            <rect class="swatch" height="15" width="15" style="fill: rgb(248, 142, 83);" />
+                            <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Animación</tspan></text>
+                        </g>
+                        <g class="cell" transform="translate(0, 63)">
+                            <rect class="swatch" height="15" width="15" style="fill: rgb(254, 210, 129);" />
+                            <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Biografía</tspan></text>
+                        </g>
+                        <g class="cell" transform="translate(0, 84)">
+                            <rect class="swatch" height="15" width="15" style="fill: rgb(251, 248, 176);" />
+                            <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Crimen</tspan></text>
+                        </g>
+                        <g class="cell" transform="translate(0, 105)">
+                            <rect class="swatch" height="15" width="15" style="fill: rgb(213, 238, 159);" />
+                            <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Drama</tspan></text>
+                        </g>
+                        <g class="cell" transform="translate(0, 126)">
+                            <rect class="swatch" height="15" width="15" style="fill: rgb(137, 207, 165);" />
+                            <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Familia</tspan></text>
+                        </g>
+                        <g class="cell" transform="translate(0, 147)">
+                            <rect class="swatch" height="15" width="15" style="fill: rgb(70, 150, 179);" />
+                            <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Horror</tspan></text>
+                        </g>
+                        <g class="cell" transform="translate(0, 168)">
+                            <rect class="swatch" height="15" width="15" style="fill: rgb(94, 79, 162);" />
+                            <text class="label" transform="translate( 20, 12.5)" font-family='"Arial", sans-serif' font-size="10px"><tspan x="0" dy="0em">Musical</tspan></text>
+                        </g>
+                    </g>
+                    <text class="legendTitle" font-family='"Arial", sans-serif' font-size="12px" font-weight="bold"><tspan x="0" dy="0em">Genre</tspan></text>
+                </g>
+            </g>
+        </g>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js" integrity="sha512-9rxMbTkN9JcgG5euudGbdIbhFZ7KGyAuVomdQDI9qXfPply9BJh0iqA7E/moLCatH2JD4xBGHwV6ezBkCpnjRQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="bower_components/chartist/dist/chartist.min.js"></script>
+    var data = {
+  labels: ['Bananas', 'Apples', 'Grapes'],
+  series: [20, 15, 40]
+};
+
+var options = {
+  labelInterpolationFnc: function(value) {
+    return value[0]
+  }
+};
+
+var responsiveOptions = [
+  ['screen and (min-width: 640px)', {
+    chartPadding: 30,
+    labelOffset: 100,
+    labelDirection: 'explode',
+    labelInterpolationFnc: function(value) {
+      return value;
+    }
+  }],
+  ['screen and (min-width: 1024px)', {
+    labelOffset: 80,
+    chartPadding: 20
+  }]
+];
+
+new Chartist.Pie('.ct-chart', data, options, responsiveOptions);
+
+  </body>
+</html>
